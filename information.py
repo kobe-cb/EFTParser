@@ -63,14 +63,14 @@ def eftInformation(user_input):
     soup = BeautifulSoup(page.content, 'html.parser')
     results = soup.find(class_='mw-parser-output')
     list = results.find_all('tr')
-    print("======Hideout/Quests======")
+    print("\n====== Hideout/Quests ======\n")
 
     for i in list:
         if (is_item(i.text.strip(), user_input)):
             print(i.text.strip())
-            print("+====Sort====+")
+            print("\n+==== Sorted View(WIP) ====+\n")
             i = i_sort(i.text)
             print(i)
             break
-
-    print("======END======")
+    
+    print("\n====================================================\n")

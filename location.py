@@ -11,7 +11,8 @@ def str_in(s):
 
 def eftLocation(results):
     list = results.find_all('li', string=lambda text: 'In')
-    print("Locations:")
+
+    print("\n====== Locations(WIP) ======\n")
     for i in list:
         c = str_in(i.text)
     
